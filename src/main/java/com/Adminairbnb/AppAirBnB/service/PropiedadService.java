@@ -33,7 +33,7 @@ public class PropiedadService {
 
         propiedadFromDb.setNombrePropiedad(form.getNombrePropiedad());
         propiedadFromDb.setUbicacion(form.getUbicacion());
-        propiedadFromDb.setNumBaños(form.getNumBaños());
+        propiedadFromDb.setNumBanos(form.getNumBanos());
         propiedadFromDb.setNumHabitaciones(form.getNumHabitaciones());
 
 

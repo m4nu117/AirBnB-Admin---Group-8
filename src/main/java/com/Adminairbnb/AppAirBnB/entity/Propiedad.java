@@ -23,10 +23,10 @@ public class Propiedad {
     private String Ubicacion;
 
     @NonNull
-    private String NumHabitaciones;
+    private int NumHabitaciones;
 
     @NonNull
-    private String NumBaños;
+    private int NumBanos;
 
     @NonNull
     private int valorCom;
