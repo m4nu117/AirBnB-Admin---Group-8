@@ -17,16 +17,16 @@ public class Propiedad {
     private Integer id;
 
     @NonNull
-    private String NombrePropiedad;
+    private String nombrePropiedad;
 
     @NonNull
-    private String Ubicacion;
+    private String ubicacion;
 
     @NonNull
-    private int NumHabitaciones;
+    private int numHabitaciones;
 
     @NonNull
-    private int NumBanos;
+    private int numBanos;
 
     @NonNull
     private int valorCom;

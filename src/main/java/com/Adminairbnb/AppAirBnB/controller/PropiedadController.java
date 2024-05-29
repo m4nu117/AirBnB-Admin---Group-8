@@ -1,8 +1,10 @@
 package com.Adminairbnb.AppAirBnB.controller;
+import com.Adminairbnb.AppAirBnB.dto.PropiedadDTO;
 import com.Adminairbnb.AppAirBnB.entity.Propiedad;
 import com.Adminairbnb.AppAirBnB.service.PropiedadService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
@@ -29,16 +31,16 @@ public class PropiedadController {
 
     @ResponseStatus (HttpStatus.CREATED)
     @PostMapping
-    public Propiedad create(@RequestBody Propiedad propiedad) {
-        return propiedadService.create(propiedad);
+    public Propiedad create(@Validated @RequestBody PropiedadDTO PropiedadDTO) {
+        return propiedadService.create(PropiedadDTO);
     }
 
 
     @PutMapping ("{id}")
     public Propiedad update(@PathVariable Integer id,
-                            @RequestBody Propiedad form) {
+                            @Validated @RequestBody PropiedadDTO PropiedadDTO) {
 
-        return propiedadService.update(id, form);
+        return propiedadService.update(id, PropiedadDTO);
 
     }
 

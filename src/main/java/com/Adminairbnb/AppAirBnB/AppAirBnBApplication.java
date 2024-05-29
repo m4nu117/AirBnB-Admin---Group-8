@@ -2,6 +2,7 @@ package com.Adminairbnb.AppAirBnB;
 import com.Adminairbnb.AppAirBnB.entity.Propiedad;
 import com.Adminairbnb.AppAirBnB.repository.PropiedadRepository;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,7 +22,7 @@ public class AppAirBnBApplication {
 	CommandLineRunner runner (PropiedadRepository propiedadRepository){
 		return args-> {
 			List<Propiedad> propiedades = Arrays.asList(
-					new Propiedad("Casa Grande Melgar", "Melgar, Cundinamarca", 3,4, 9000000),
+					new Propiedad("Casa Grande Melgar", "Melgar, Cundinamarca", 3,4, 1200000),
 					new Propiedad("Finca Para Vacaciones", "Calera, Cundinamarca", 5, 3, 1600000),
 					new Propiedad("Casa Con piscina", "Melgar, Cundinamarca", 2, 1, 900000),
 					new Propiedad("Condominio Vacacional", "La Vega, Tolima", 8, 4, 1500000),
@@ -34,5 +35,8 @@ public class AppAirBnBApplication {
 
 
 	}
-
+@Bean
+	ModelMapper modelMapper(){
+		return new ModelMapper();
+}
 }
